@@ -1,9 +1,15 @@
-﻿#ifndef FACEDATA_H
-#define FACEDATA_H
+﻿
 
+#ifndef MODEL_H
+#define MODEL_H
 
-
+#include <vector>
+#include <string>
 #include <istream>
+#include "Vector3D.h"
+
+
+class TGAImage;
 
 struct FaceData {
     int i1;
@@ -28,5 +34,12 @@ inline std::ostream &operator<<(std::ostream &os, const FaceData &v) {
 }
 
 
+struct Model {
+    std::vector<Vector3D> vectors;
+    std::vector<FaceData> faces;
+};
 
-#endif //FACEDATA_H
+bool WireFrameDrawing(std::string fileName, const int width, const int height, TGAImage &framebuffer);
+
+
+#endif //MODEL_H
