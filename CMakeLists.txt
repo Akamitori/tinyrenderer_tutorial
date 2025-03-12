@@ -3,7 +3,7 @@ project(graphics_tiny_renderer)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(graphics_tiny_renderer main.cpp Vector3D.h Vector2D.h tgaimage.cpp triangle_drawing.cpp Model.cpp)
+add_executable(graphics_tiny_renderer main.cpp Vector3D.h Vector2D.h tgaimage.cpp shape_drawing.cpp Model.cpp)
 
 set(MODEL_SOURCE_DIR "${CMAKE_SOURCE_DIR}/data")
 set(MODEL_DEST_DIR "${CMAKE_BINARY_DIR}/data")
